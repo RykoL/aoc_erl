@@ -27,6 +27,6 @@ process_masses() ->
 calculate_fuel(Mass) when Mass >= 0 ->
     Fuel = math:floor(Mass / 3) - 2,
     Fuel + calculate_fuel(Fuel);
-calculate_fuel(Mass) when Mass <= 0 ->
+calculate_fuel(Mass) when Mass =< 0 ->
     0.
 
